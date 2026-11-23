@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Owner Dashboard | D Balaji Realty Group</title><link rel="stylesheet" href="style.css"></head>
+<body class="admin-body">
+<header class="topbar"><a class="brand" href="index.html"><img src="assets/logo.png" alt=""><span>D BALAJI <b>OWNER DASHBOARD</b></span></a><a href="index.html">View Customer Website ↗</a></header>
+<main class="admin-wrap">
+  <section id="login-panel" class="panel login-panel"><p class="eyebrow">PRIVATE ACCESS</p><h1>Owner <em>Login</em></h1><p class="muted">Sign in with your authorized administrator email and password.</p>
+    <form id="login-form"><label>Email<input id="email" type="email" required autocomplete="username"></label><label>Password<input id="password" type="password" required autocomplete="current-password"></label><button class="gold-btn" type="submit">Secure Login</button><p id="login-msg" class="form-msg"></p></form>
+  </section>
+  <section id="dashboard" hidden>
+    <div class="dash-head"><div><p class="eyebrow">PROPERTY MANAGEMENT</p><h1>Owner <em>Dashboard</em></h1></div><button id="logout" class="outline-btn">Log Out</button></div>
+    <div class="stats" id="stats"></div>
+    <section class="panel"><h2 id="form-title">Add New Property</h2>
+      <form id="property-form" class="property-form">
+        <input id="property-id" type="hidden">
+        <label>Property Title<input id="title" required placeholder="e.g. Premium 2 BHK Flat"></label>
+        <label>Category<select id="type" required><option value="">Select category</option><option>Residential</option><option>Commercial</option><option>NA Plot</option><option>Open Plot</option><option>Farm Land</option></select></label>
+        <label>Price<input id="price" placeholder="e.g. ₹45.50 Lakh"></label>
+        <label>Location<input id="location" required placeholder="Area, city"></label>
+        <label>Area / Size<input id="area" placeholder="e.g. 1,200 sq.ft."></label>
+        <label>Status<select id="status"><option value="available">Available</option><option value="sold">Sold</option></select></label>
+        <label class="wide">Description<textarea id="description" rows="4" placeholder="Property details, amenities, features…"></textarea></label>
+        <label class="wide">Property Photos (select multiple)<input id="photos" type="file" accept="image/*" multiple><small>Images are uploaded securely to your website storage.</small></label>
+        <div id="existing-photos" class="existing-photos wide"></div>
+        <div class="wide form-actions"><button class="gold-btn" type="submit">Save Property</button><button id="reset-form" class="outline-btn" type="button">Clear Form</button><span id="save-msg" class="form-msg"></span></div>
+      </form>
+    </section>
+    <section class="panel"><div class="list-head"><h2>Manage Properties</h2><input id="admin-search" placeholder="Search properties…"></div><div id="admin-list" class="admin-list"></div></section>
+  </section>
+</main>
+<footer><span>© <span id="year"></span> D Balaji Realty Group</span><a href="index.html">Customer Website</a></footer>
+<script type="module" src="admin.js"></script>
+</body></html>
